@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript</h1>
+    </header>
+    <section>
+      <h2>Binding Event Listeners to Dynamically Created Elements</h2>
+      <div class="main-content-container">
+        <div class="action-container">
+          <div class="input-container">
+            <input
+              type="text"
+              placeholder="enter framework"
+              id="input-product"
+              name="name"
+              size="17"
+            />
+            <button class="button-add-framework">Add Framework</button>
+          </div>
+          <div>
+            <div class = "ul-container">
+              <ul>
+                <li class="element-list">
+                  JavaScript<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  Python<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  Java<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  PHP<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  C++<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  Ruby<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="code-info">
+          <p>
+            So, we have alredy existing "li" elements that contain "programming languages" and
+            buttons "delete".
+          </p>
+          <p>
+            We are adding new Dynamically Created "li" Elements with "Frameworks" and
+            Buttons "delete" by "click" or "keypress" events using input value.
+            (Try It!)
+          </p>
+          <p>I have created following code for adding new (frameworks) elements:</p>
+          <p class="js-variables">
+            const button = document.querySelector("button");
+          </p>
+          <p class="js-variables">
+            const input = document.querySelector("#input-product");
+          </p>
+          <p class="js-variables">const ul = document.querySelector("ul");</p>
+          <p class="js-variables">const h2 = document.querySelector("h2");</p>
+          <p class="js-variables">const h4 = document.querySelector("h4");</p>
+          <p class="js-variables">
+            const deleteButtons = document.querySelectorAll(".btn-delete");
+          </p>
+          <p class="js-variables">
+            const mainCode = document.querySelector(".event-delegation");
+          </p>
+          <p>
+            /*We are adding "li" element that contains the name of Framework and button "delete",
+             at the beginning of the list by clicking "Add Framework" button or by pressing key "Enter":*/
+          </p>
+          <p class="js-code">
+            button.addEventListener("click", function () {<br />
+            if (input.value.length > 0) {<br />
+            const htmlEl = `&lt;li class="element-list"&gt;
+            ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
+            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br />
+            ul.insertAdjacentHTML("afterBegin", htmlEl);<br />input.value =
+            "";<br />
+            &nbsp;&nbsp;} <br />});
+          </p>
+          <p class="js-code">
+            input.addEventListener("keypress", function (e) { if (e.key ===
+            "Enter" && input.value !== "") {<br />
+            const htmlEl = `&lt;li class="element-list"&gt;
+            ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
+            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br />
+            ul.insertAdjacentHTML("afterBegin", htmlEl);<br />input.value =
+            "";<br />
+            &nbsp;&nbsp;}<br />
+            });
+          </p>
+          <p>
+            We want to remove added "li" element by clicking "delete" button. The problem
+            is that an ordinary code will affect only "li" elements with "programming languages" but
+            the Dynamically Created Elements with "frameworks" will not be affected:
+          </p>
+          <p class="js-code">
+            deleteButtons.forEach((delBtn) => {
+            <br />delBtn.addEventListener("click", () => {<br />
+            delBtn.parentElement.remove(); <br />&nbsp;&nbsp;}); <br />});
+          </p>
+          <p>
+            So, It means that we can delete only "programming languages" but not
+            added "frameworks" by clicking "delete" button !
+          </p>
+          <p>
+            To solve this problem and make our new added "li" elements (with "frameworks" and
+            "delete" buttons) clickable, we use
+            <span class="delegation">"Event Delegation"</span>!
+          </p>
+          <p>
+            It means that we are adding handling of the event not directly to
+            our button "delete" element but to the "ul" element, which contains all "li" elements and stands above them in DOM structure. So, We are "catching" an event triggered in our
+            "ul" element that matches our selected button "delete" element:
+          </p>
+          <p class="js-code event-delegation">
+            ul.addEventListener("click", (event) => {<br />
+            if (event.target.classList.contains("btn-delete")) {<br />
+            event.target.parentElement.remove();<br />
+            h2.style.color = "red";
+            <br />h4.classList.toggle("h4-toogle-style");<br />
+            mainCode.classList.toggle("event-delegation");<br />
+            &nbsp;&nbsp;}<br />
+            });
+          </p>
+          <h4>conclusion</h4>
+          <p>
+            Using <span class="delegation">"Event Delegation"</span> we can
+            provide an element we need with the event handler, based on the
+            event attached to its parent element or to the element standing
+            higher in the DOM. It allows us to include all Dynamically Created
+            Elements to the list of event handlers that we need !
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-img">
+        <a href="https://github.com/Romannet77" target="_blank"><img class="my-photo" src="./images/my-photo.jpeg" alt="my-photo"/></a>       
+      </div>
+      <div class="profile-links">
+        <a href="https://www.linkedin.com/in/roman-yurchenko-89630923b/" target="_blank">
+          <img src="./images/linkedin-icon.svg" alt="LinkedIn-img">
+        </a>
+         <a href="https://github.com/Romannet77" target="_blank"><img src="./images/github-icon.svg" alt="Git-img"></a>  
+      </div> 
+      <p class="author-info">
+        © 2022 Written and Developed by<span><a href="https://github.com/Romannet77" target="_blank">Mr. Roman Yurchenko</span>
+      </p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
