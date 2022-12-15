@@ -1,6 +1,11 @@
+:root {
+  --blue-color: rgb(25, 54, 247);
+}
+
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -101,7 +106,7 @@ div.code-info {
 }
 
 p span.try-it {
-  color: rgb(65, 50, 122);
+  color: var(--blue-color);
   font-weight: bolder;
 }
 
@@ -123,7 +128,7 @@ p.event-delegation {
 }
 
 .h4-toogle-style {
-  background-color: rgb(25, 14, 95);
+  background-color: var(--blue-color);
   color: rgb(241, 236, 227);
   border-radius: 25px;
 }
@@ -179,7 +184,7 @@ div.ul-container li span {
 }
 
 p span.delegation {
-  color: rgb(47, 33, 245);
+  color: var(--blue-color);
   font-weight: bold;
 }
 
