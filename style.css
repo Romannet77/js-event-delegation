@@ -54,7 +54,22 @@ input {
   border-radius: 10px;
   color: rgb(35, 4, 209);
   font-weight: bold;
-  box-shadow: 3px 3px 3px 1px rgba(0, 0, 255, 0.2);
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 255, 0.8);
+}
+
+::placeholder {
+  color: rgb(151, 14, 14);
+  opacity: 0.7; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(151, 14, 14);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(151, 14, 14);
 }
 
 .button-add-framework {
@@ -65,7 +80,7 @@ input {
   background-color: rgb(35, 4, 209);
   color: rgb(241, 236, 227);
   border-radius: 25px;
-  box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, 0.2);
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, 0.8);
 }
 
 .button-add-framework:hover {
@@ -83,6 +98,11 @@ div.ul-container {
 div.code-info {
   padding: 1rem;
   width: 40vw;
+}
+
+p span.try-it {
+  color: rgb(65, 50, 122);
+  font-weight: bolder;
 }
 
 p.js-code {
@@ -103,7 +123,7 @@ p.event-delegation {
 }
 
 .h4-toogle-style {
-  background-color: rgb(35, 4, 209);
+  background-color: rgb(25, 14, 95);
   color: rgb(241, 236, 227);
   border-radius: 25px;
 }
@@ -135,7 +155,7 @@ li {
   font-weight: bold;
   cursor: pointer;
   background-color: rgb(236, 241, 241);
-  color: rgb(252, 32, 32);
+  color: rgb(165, 32, 32);
   border-radius: 15px;
   box-shadow: 4px 4px 4px 1px rgba(1, 14, 20, 0.3);
 }
