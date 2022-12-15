@@ -24,6 +24,10 @@ h1 {
   color: rgb(92, 19, 19);
 }
 
+h2 {
+  color: rgb(47, 33, 245);
+}
+
 div.main-content-container {
   display: flex;
   justify-content: center;
@@ -107,16 +111,21 @@ p.event-delegation {
 ul {
   margin-top: 2rem;
   width: 23rem;
-  background-color: rgb(118, 196, 199);
+  border: 3px solid gray;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 255, 0.2);
 }
 
 li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem 0;
+  margin: 1rem 0.2rem;
   font-size: 1.5rem;
-  background-color: rgb(213, 236, 236);
+  border: 1.5px solid rgb(85, 40, 8);
+  border-radius: 5px;
+  cursor: alias;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 255, 0.2);
 }
 
 .btn-delete {
@@ -145,12 +154,12 @@ div.code-info p {
 div.ul-container li span {
   font-size: 0.8rem;
   margin-left: auto;
-  padding-right: 2.8rem;
+  padding-right: 2.3rem;
   color: rgb(116, 63, 170);
 }
 
 p span.delegation {
-  color: blue;
+  color: rgb(47, 33, 245);
   font-weight: bold;
 }
 
@@ -212,6 +221,6 @@ footer .profile-links {
 }
 
 footer .profile-links img {
-  height: 3rem;
+  height: 4rem;
   padding: 0.5rem;
 }
