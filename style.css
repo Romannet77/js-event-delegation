@@ -172,12 +172,13 @@ p span.delegation {
 
   div.action-container {
     position: static;
+    width: 100%;
     margin: auto;
   }
 
   ul {
     margin-top: 2rem;
-    width: 21rem;
+    width: 100%;
   }
 
   div.code-info {
@@ -187,6 +188,7 @@ p span.delegation {
 
 footer {
   background-color: rgb(224, 223, 223);
+  width: 100%;
 }
 
 footer .author-info {
