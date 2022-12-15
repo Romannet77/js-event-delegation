@@ -26,7 +26,7 @@
             <button class="button-add-framework">Add Framework</button>
           </div>
           <div>
-            <div class = "ul-container">
+            <div class="ul-container">
               <ul>
                 <li class="element-list">
                   JavaScript<span>programming<br />language</span
@@ -58,15 +58,17 @@
         </div>
         <div class="code-info">
           <p>
-            So, we have alredy existing "li" elements that contain "programming languages" and
-            buttons "delete".
+            So, we have alredy existing "li" elements that contain "programming
+            languages" and buttons "delete".
           </p>
           <p>
-            We are adding new Dynamically Created "li" Elements with "Frameworks" and
-            Buttons "delete" by "click" or "keypress" events using input value.
-            (Try It!)
+            We are adding new Dynamically Created "li" Elements with
+            "Frameworks" and Buttons "delete" by "click" or "keypress" events
+            using input value. (Try It!)
           </p>
-          <p>I have created following code for adding new (frameworks) elements:</p>
+          <p>
+            I have created following code for adding new (frameworks) elements:
+          </p>
           <p class="js-variables">
             const button = document.querySelector("button");
           </p>
@@ -83,8 +85,9 @@
             const mainCode = document.querySelector(".event-delegation");
           </p>
           <p>
-            /*We are adding "li" element that contains the name of Framework and button "delete",
-             at the beginning of the list by clicking "Add Framework" button or by pressing key "Enter":*/
+            /*We are adding "li" element that contains the name of Framework and
+            button "delete", at the beginning of the list by clicking "Add
+            Framework" button or by pressing key "Enter":*/
           </p>
           <p class="js-code">
             button.addEventListener("click", function () {<br />
@@ -108,9 +111,10 @@
             });
           </p>
           <p>
-            We want to remove added "li" element by clicking "delete" button. The problem
-            is that an ordinary code will affect only "li" elements with "programming languages" but
-            the Dynamically Created Elements with "frameworks" will not be affected:
+            We want to remove added "li" element by clicking "delete" button.
+            The problem is that an ordinary code will affect only "li" elements
+            with "programming languages" but the Dynamically Created Elements
+            with "frameworks" will not be affected:
           </p>
           <p class="js-code">
             deleteButtons.forEach((delBtn) => {
@@ -122,14 +126,16 @@
             added "frameworks" by clicking "delete" button !
           </p>
           <p>
-            To solve this problem and make our new added "li" elements (with "frameworks" and
-            "delete" buttons) clickable, we use
+            To solve this problem and make our new added "li" elements (with
+            "frameworks" and "delete" buttons) clickable, we use
             <span class="delegation">"Event Delegation"</span>!
           </p>
           <p>
             It means that we are adding handling of the event not directly to
-            our button "delete" element but to the "ul" element, which contains all "li" elements and stands above them in DOM structure. So, We are "catching" an event triggered in our
-            "ul" element that matches our selected button "delete" element:
+            our button "delete" element but to the "ul" element, which contains
+            all "li" elements and stands above them in DOM structure. So, We are
+            "catching" an event triggered in our "ul" element that matches our
+            selected button "delete" element:
           </p>
           <p class="js-code event-delegation">
             ul.addEventListener("click", (event) => {<br />
@@ -154,16 +160,27 @@
     </section>
     <footer>
       <div class="footer-img">
-        <a href="https://github.com/Romannet77" target="_blank"><img class="my-photo" src="./images/my-photo.jpeg" alt="my-photo"/></a>       
+        <a href="https://github.com/Romannet77" target="_blank"
+          ><img class="my-photo" src="./images/my-photo.jpeg" alt="my-photo"
+        /></a>
       </div>
       <div class="profile-links">
-        <a href="https://www.linkedin.com/in/roman-yurchenko-89630923b/" target="_blank">
-          <img src="./images/linkedin-icon.svg" alt="LinkedIn-img">
+        <a
+          href="https://www.linkedin.com/in/roman-yurchenko-89630923b/"
+          target="_blank"
+        >
+          <img src="./images/linkedin-icon.svg" alt="LinkedIn-img" />
         </a>
-         <a href="https://github.com/Romannet77" target="_blank"><img src="./images/github-icon.svg" alt="Git-img"></a>  
-      </div> 
+        <a href="https://github.com/Romannet77" target="_blank"
+          ><img src="./images/github-icon.svg" alt="Git-img"
+        /></a>
+      </div>
       <p class="author-info">
-        © 2022 Written and Developed by<span><a href="https://github.com/Romannet77" target="_blank">Mr. Roman Yurchenko</span>
+        © 2022 Written and Developed by<span
+          ><a href="https://github.com/Romannet77" target="_blank"
+            >Mr. Roman Yurchenko,</a
+          ></span
+        >
       </p>
     </footer>
     <script src="./script.js"></script>
