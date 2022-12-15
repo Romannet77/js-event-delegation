@@ -111,11 +111,11 @@ p span.try-it {
 }
 
 p.js-code {
-  color: brown;
+  color: rgb(165, 42, 42);
 }
 
 p.js-variables {
-  color: rgb(184, 4, 103);
+  color: rgb(165, 42, 42);
 }
 
 p.event-delegation {
