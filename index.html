@@ -58,11 +58,11 @@
         </div>
         <div class="code-info">
           <p>
-            So, we have alredy existing "li" elements that contain "programming
-            languages" and buttons "delete".
+            So, we have alredy existing &lt;li&gt; elements that contain
+            "programming languages" and buttons "delete".
           </p>
           <p>
-            We are adding new Dynamically Created "li" Elements with
+            We are adding new Dynamically Created &lt;li&gt; Elements with
             "Frameworks" and Buttons "delete" by "click" or "keypress" events
             using input value.
             <span class="try-it"
@@ -71,10 +71,10 @@
             >
           </p>
           <p>
-            I have created the following code for Adding "li" element (that
-            contains the name of Framework and Button "delete") at the beginning
-            of the list by clicking "Add Framework" button or by pressing key
-            "Enter":
+            I have created the following code for Adding &lt;li&gt; element
+            (that contains the name of Framework and Button "delete") at the
+            beginning of the list by clicking "Add Framework" button or by
+            pressing key "Enter":
           </p>
           <p class="js-variables">
             const button = document.querySelector("button");
@@ -114,10 +114,10 @@
             });
           </p>
           <p>
-            We want to remove added "li" element by clicking "delete" button.
-            The problem is that an ordinary code will affect only "li" elements
-            with "programming languages" but the Dynamically Created Elements
-            with "frameworks" will not be affected:
+            We want to remove added &lt;li&gt; element by clicking "delete"
+            button. The problem is that an ordinary code will affect only
+            &lt;li&gt; elements with "programming languages" but the Dynamically
+            Created Elements with "frameworks" will not be affected:
           </p>
           <p class="js-code">
             deleteButtons.forEach((delBtn) => {
@@ -129,16 +129,17 @@
             added "frameworks" by clicking "delete" button !
           </p>
           <p>
-            To solve this problem and make our new added "li" elements (with
-            "frameworks" and "delete" buttons) clickable, we use
+            To solve this problem and make our new added &lt;li&gt; elements
+            (with "frameworks" and "delete" buttons) clickable, we use
             <span class="delegation">"Event Delegation"</span> pattern!
           </p>
           <p>
             It means that we are adding handling of the event not directly to
-            our button "delete" element but to the "ul" element, which contains
-            all "li" elements and stands above them in DOM structure. So, We are
-            "catching" an event triggered in our "ul" element that matches our
-            selected button "delete" element:
+            our &lt;button&gt; "delete" element but to the &lt;ul&gt; element,
+            which contains all &lt;li&gt; elements and stands above them in DOM
+            structure. So, We are "catching" an event triggered in our
+            &lt;ul&gt; element that matches our selected &lt;button&gt; "delete"
+            element:
           </p>
           <p class="js-code event-delegation">
             ul.addEventListener("click", (event) => {<br />
