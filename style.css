@@ -188,27 +188,9 @@ p span.delegation {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 744px) {
-  div.main-content-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  div.action-container {
-    position: static;
-    width: 100%;
-    margin: auto;
-  }
-
-  ul {
-    margin-top: 2rem;
-    width: 100%;
-  }
-
-  div.code-info {
-    width: 80vw;
-  }
+.html-tag {
+  background-color: rgba(229, 229, 229, 0.9);
+  border-radius: 20%;
 }
 
 footer {
@@ -250,4 +232,33 @@ footer .profile-links {
 footer .profile-links img {
   height: 4rem;
   padding: 0.5rem;
+}
+
+@media only screen and (max-width: 744px) {
+  div.main-content-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div.action-container {
+    position: static;
+    width: 100%;
+    margin: auto;
+  }
+
+  ul {
+    margin-top: 2rem;
+    width: 80%;
+  }
+
+  div.code-info {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  ul {
+    width: 100%;
+  }
 }
