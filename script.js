@@ -1,6 +1,7 @@
 const button = document.querySelector("button");
 
-const input = document.querySelector("#input-product");
+const input = document.querySelector
+("#input-value");
 
 const ul = document.querySelector("ul");
 
@@ -8,16 +9,17 @@ const h2 = document.querySelector("h2");
 
 const h4 = document.querySelector("h4");
 
-const mainCode = document.querySelector(".event-delegation");
-
 const deleteButtons = document.querySelectorAll(".btn-delete");
 
 /*Add an element at the beginning of the list by clicking "Add Framework" button*/
 
 button.addEventListener("click", function () {
-  if (input.value.length > 0) {
-    const htmlEl = `<li class = "element-list">${input.value}<span>framework</span><button class="btn-delete">delete</button></li>`;
-    ul.insertAdjacentHTML("afterBegin", htmlEl);
+  if (input.value !== "") {
+
+    const li = `<li class = "element-list">${input.value}<span>framework</span>
+    <button class="btn-delete">delete</button></li>`;
+
+    ul.insertAdjacentHTML("afterBegin", li);
 
     input.value = "";
   }
@@ -27,8 +29,11 @@ button.addEventListener("click", function () {
 
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter" && input.value !== "") {
-    const htmlEl = `<li class = "element-list">${input.value}<span>framework</span><button class="btn-delete">delete</button></li>`;
-    ul.insertAdjacentHTML("afterBegin", htmlEl);
+
+    const li = `<li class = "element-list">${input.value}<span>framework</span>
+    <button class="btn-delete">delete</button></li>`;
+
+    ul.insertAdjacentHTML("afterBegin", li);
 
     input.value = "";
   }
@@ -41,7 +46,6 @@ ul.addEventListener("click", (e) => {
     e.target.parentElement.remove();
     h2.style.color = "red";
     h4.classList.toggle("h4-toogle-style");
-    mainCode.classList.toggle("event-delegation");
   }
 });
 

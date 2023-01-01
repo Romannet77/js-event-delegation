@@ -33,6 +33,15 @@ h2 {
   color: rgb(47, 33, 245);
 }
 
+a {
+  color:rgb(1, 134, 195);
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 div.main-content-container {
   display: flex;
   justify-content: center;
@@ -59,7 +68,7 @@ input {
   border-radius: 10px;
   color: rgb(35, 4, 209);
   font-weight: bold;
-  box-shadow: 3px 3px 3px 1px rgba(0, 0, 255, 0.8);
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 255, 0.3);
 }
 
 ::placeholder {
@@ -86,7 +95,7 @@ input {
   background-color: rgb(35, 4, 209);
   color: rgb(241, 236, 227);
   border-radius: 25px;
-  box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, 0.8);
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, 0.3);
 }
 
 .button-add-framework:hover {
@@ -111,16 +120,11 @@ p span.try-it {
   font-weight: bolder;
 }
 
-p.js-code {
+div.code-info p.js-code {
   color: rgb(165, 42, 42);
-}
-
-p.js-variables {
-  color: rgb(165, 42, 42);
-}
-
-p.event-delegation {
   background-color: rgb(233, 233, 253);
+  line-height: 2rem;
+  padding-left: 0.8rem;
 }
 
 .done {
@@ -131,6 +135,7 @@ p.event-delegation {
 .h4-toogle-style {
   background-color: var(--blue-color);
   color: rgb(241, 236, 227);
+  font-weight: 700;
   border-radius: 25px;
 }
 
@@ -180,9 +185,14 @@ div.code-info p {
 
 div.ul-container li span {
   font-size: 0.8rem;
+  font-weight: 650;
   margin-left: auto;
   padding-right: 2.3rem;
   color: rgb(116, 63, 170);
+}
+
+div h4.conclusion {
+  margin-top: 2.5rem;
 }
 
 p span.delegation {
@@ -236,7 +246,10 @@ footer .profile-links img {
   padding: 0.5rem;
 }
 
-@media only screen and (max-width: 744px) {
+
+
+
+@media only screen and (max-width: 920px) {
   div.main-content-container {
     flex-direction: column;
     justify-content: center;
@@ -245,23 +258,27 @@ footer .profile-links img {
 
   div.action-container {
     position: static;
-    width: 100%;
+    width: 80%;
     margin: auto;
   }
 
   ul {
     margin-top: 2rem;
-    width: 80%;
   }
 
   div.code-info {
-    width: 80vw;
+    width: 95vw;
   }
 }
 
-@media only screen and (max-width: 520px) {
-  ul {
+@media only screen and (max-width: 540px) {
+
+  div.action-container {
     width: 100%;
+  }
+
+  ul {
+    width: 95%
   }
 }
 
