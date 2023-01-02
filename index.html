@@ -80,8 +80,8 @@
             const li = `&lt;li class="element-list"&gt;
             ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
             class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br>
-            ul.insertAdjacentHTML("afterBegin", li);<br>input.value =
-            "";<br>
+            ul.insertAdjacentHTML(
+            "afterBegin", li);<br>input.value = "";<br>
             &nbsp;&nbsp;} <br>});
           </p>
           <p class="js-code">
@@ -90,8 +90,8 @@
             const li = `&lt;li class="element-list"&gt;
             ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
             class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br>
-            ul.insertAdjacentHTML("afterBegin", li);<br>input.value =
-            "";<br>
+            ul.insertAdjacentHTML(
+            "afterBegin", li);<br>input.value ="";<br>
             &nbsp;&nbsp;}<br>
             });
           </p>
@@ -134,8 +134,10 @@
           <p class="js-code">const h4 = document.querySelector("h4");</p>
           <p class="js-code">
             ul.addEventListener("click", (event) => {<br>
-            if (event.target.classList.contains("btn-delete")) {<br>
-            event.target.parentElement.remove();<br>
+            if (event.target.classList.contains
+            ("btn-delete")) {<br>
+            event.target.parentElement.
+            remove();<br>
             h2.style.color = "red";
             <br>h4.classList.toggle("h4-toogle-style");<br>
             &nbsp;&nbsp;}<br>
@@ -170,8 +172,8 @@
         </a>
       </div>
       <p class="author-info">
-        © 2022 Written and Developed by
-        <span><a href="https://github.com/Romannet77" target="_blank">Mr. Roman Yurchenko</a></span>
+        © 2022 Written and Developed by Mr. 
+        <span><a href="https://github.com/Romannet77" target="_blank">Roman Yurchenko</a></span>
       </p>
     </footer>
     <script src="./script.js"></script>
