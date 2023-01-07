@@ -34,7 +34,7 @@ h2 {
 }
 
 a {
-  color:rgb(1, 134, 195);
+  color: rgb(1, 134, 195);
   font-weight: 700;
 }
 
@@ -120,11 +120,21 @@ p span.try-it {
   font-weight: bolder;
 }
 
-div.code-info p.js-code {
+.js-code {
   color: rgb(165, 42, 42);
   background-color: rgb(233, 233, 253);
   line-height: 2rem;
   padding-left: 0.8rem;
+}
+
+.js-method {
+  color: var(--blue-color);
+  font-weight: bold;
+}
+
+.js-property {
+  color: rgb(12, 151, 12);
+  font-weight: bold;
 }
 
 .done {
@@ -246,9 +256,6 @@ footer .profile-links img {
   padding: 0.5rem;
 }
 
-
-
-
 @media only screen and (max-width: 920px) {
   div.main-content-container {
     flex-direction: column;
@@ -272,13 +279,11 @@ footer .profile-links img {
 }
 
 @media only screen and (max-width: 540px) {
-
   div.action-container {
     width: 100%;
   }
 
   ul {
-    width: 95%
+    width: 100%;
   }
 }
-

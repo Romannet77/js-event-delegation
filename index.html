@@ -124,24 +124,25 @@
           <p>
             It means that we are adding handling of the event not directly to
             our <span class="html-tag">&lt;button&gt;</span> "delete" element
-            but to the <span class="html-tag">&lt;ul&gt;</span> element, which
+            but to the <span class="html-tag">&lt;ul&gt;</span> element that
             contains all <span class="html-tag">&lt;li&gt;</span> elements and
             stands above them in DOM structure. So, We are "catching" an event
             triggered in our <span class="html-tag">&lt;ul&gt;</span> element
             that matches our selected "delete" &lt;button&gt; element:
           </p>
-          <p class="js-code">const h2 = document.querySelector("h2");</p>
-          <p class="js-code">const h4 = document.querySelector("h4");</p>
+          <p class="js-code">const ul = document.querySelector("ul");</p>
           <p class="js-code">
             ul.addEventListener("click", (event) => {<br>
-            if (event.target.classList.contains
-            ("btn-delete")) {<br>
-            event.target.parentElement.
-            remove();<br>
-            h2.style.color = "red";
-            <br>h4.classList.toggle("h4-toogle-style");<br>
+            if (event.target.classList.contains ("btn-delete")) {<br>
+            event.target.parentElement.remove();<br>
             &nbsp;&nbsp;}<br>
             });
+          </p>
+          <p>
+            We used the <span class="js-property">classList</span> property and 
+            the <span class="js-method">contains()</span> 
+            method to "catch" the click event on the HTML element that we need:
+            <span class="js-code">event.target.classList.contains ("btn-delete")</span> !
           </p>
           <div>
             <h4 class="conclusion">conclusion</h4>
