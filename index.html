@@ -63,15 +63,15 @@
               insertAdjacentHTML()
             </a> JavaScript method was used: 
           </p>
-          <p class="js-code">
-            const button = document.querySelector("button");
+          <p class="js-code-info">
+            const button = document.querySelector(".button-add-framework");
           </p>
-          <p class="js-code">
+          <p class="js-code-info">
             const input = document.querySelector("#input-value");
           </p>
-          <p class="js-code">const ul = document.querySelector("ul");</p>
-          <p class="js-code">/*Add an element at the beginning of the list by clicking "Add Framework" button:*/</p>
-          <p class="js-code">
+          <p class="js-code-info">const ul = document.querySelector("ul");</p>
+          <p class="js-code-info">/*Add an element at the beginning of the list by clicking "Add Framework" button:*/</p>
+          <p class="js-code-info">
             button.addEventListener("click", function () {<br>
             if (input.value !== "") {<br><br>
             const li = `&lt;li class="element-list"&gt;
@@ -81,8 +81,8 @@
             "afterBegin", li);<br><br>input.value = "";<br>
             &nbsp;&nbsp;} <br>});
           </p>
-          <p class="js-code">/*Add an element at the beginning of the list by pressing key "Enter":*/</p>
-          <p class="js-code">
+          <p class="js-code-info">/*Add an element at the beginning of the list by pressing key "Enter":*/</p>
+          <p class="js-code-info">
             input.addEventListener("keypress", function (e) {<br>if (e.key ===
             "Enter" && input.value !== "") {<br><br>
             const li = `&lt;li class="element-list"&gt;
@@ -101,10 +101,10 @@
             "programming languages" but the dynamically created elements with
             "frameworks" will not be affected:
           </p>
-          <p class="js-code">
+          <p class="js-code-info">
             const deleteButtons = document.querySelectorAll(".btn-delete");
           </p>
-          <p class="js-code">
+          <p class="js-code-info">
             deleteButtons.forEach((delBtn) => {
             <br>delBtn.addEventListener("click", () => {<br>
             delBtn.parentElement.remove(); <br>&nbsp;&nbsp;}); <br>});
@@ -128,8 +128,8 @@
             triggered in our <span class="html-tag">&lt;ul&gt;</span> element
             that matches our selected "delete" &lt;button&gt; element:
           </p>
-          <p class="js-code">const ul = document.querySelector("ul");</p>
-          <p class="js-code">
+          <p class="js-code-info">const ul = document.querySelector("ul");</p>
+          <p class="js-code-info">
             ul.addEventListener("click", (event) => {<br>
             if (event.target.classList.contains ("btn-delete")) {<br>
             event.target.parentElement.remove();<br>
@@ -139,8 +139,8 @@
           <p>
             We used the <span class="js-property">classList</span> property and 
             the <span class="js-method">contains()</span> 
-            method to "catch" the click event on the HTML element that we need:
-            <span class="js-code">event.target.classList.contains ("btn-delete")</span> !
+            method to "catch" the "click" event on the HTML element that we need:
+            <span class="js-code">event.target.classList.contains("btn-delete")</span> !
           </p>
           <div>
             <h4 class="conclusion">conclusion</h4>

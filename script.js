@@ -1,7 +1,6 @@
-const button = document.querySelector("button");
+const button = document.querySelector(".button-add-framework");
 
-const input = document.querySelector
-("#input-value");
+const input = document.querySelector("#input-value");
 
 const ul = document.querySelector("ul");
 
@@ -15,7 +14,6 @@ const deleteButtons = document.querySelectorAll(".btn-delete");
 
 button.addEventListener("click", function () {
   if (input.value !== "") {
-
     const li = `<li class = "element-list">${input.value}<span>framework</span>
     <button class="btn-delete">delete</button></li>`;
 
@@ -29,7 +27,6 @@ button.addEventListener("click", function () {
 
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter" && input.value !== "") {
-
     const li = `<li class = "element-list">${input.value}<span>framework</span>
     <button class="btn-delete">delete</button></li>`;
 

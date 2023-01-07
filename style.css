@@ -120,7 +120,7 @@ p span.try-it {
   font-weight: bolder;
 }
 
-div.code-info p.js-code {
+div.code-info p.js-code-info {
   color: rgb(165, 42, 42);
   background-color: rgb(233, 233, 253);
   line-height: 1.8rem;
@@ -129,6 +129,7 @@ div.code-info p.js-code {
 
 span.js-code {
   color: rgb(165, 42, 42);
+  font-weight: bold;
 }
 
 .js-method {
