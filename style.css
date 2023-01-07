@@ -127,6 +127,10 @@ div.code-info p.js-code {
   padding-left: 0.6rem;
 }
 
+span.js-code {
+  color: rgb(165, 42, 42);
+}
+
 .js-method {
   color: var(--blue-color);
   font-weight: bold;
