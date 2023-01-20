@@ -143,6 +143,10 @@ div.js-function p {
   padding: 0.2rem 0 0.2rem 0.6rem;
 }
 
+div.js-function p.js-if-statement {
+  padding-left: 1.1rem;
+}
+
 div.function-body-part {
   padding-left: 1.3rem;
 }
