@@ -73,23 +73,23 @@
           <p class="js-code-info">/*Add an element at the beginning of the list by clicking "Add Framework" button:*/</p>
           <p class="js-code-info">
             button.addEventListener("click", function () {<br>
-            if (input.value !== "") {<br><br>
+            if (input.value !== "") {<br>
             const li = `&lt;li class="element-list"&gt;
             ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
-            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br><br>
+            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br>
             ul.insertAdjacentHTML(
-            "afterBegin", li);<br><br>input.value = "";<br>
+            "afterBegin", li);<br>input.value = "";<br>
             &nbsp;&nbsp;} <br>});
           </p>
           <p class="js-code-info">/*Add an element at the beginning of the list by pressing key "Enter":*/</p>
           <p class="js-code-info">
             input.addEventListener("keypress", function (e) {<br>if (e.key ===
-            "Enter" && input.value !== "") {<br><br>
+            "Enter" && input.value !== "") {<br>
             const li = `&lt;li class="element-list"&gt;
             ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
-            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br><br>
+            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br>
             ul.insertAdjacentHTML(
-            "afterBegin", li);<br><br>input.value ="";<br>
+            "afterBegin", li);<br>input.value ="";<br>
             &nbsp;&nbsp;}<br>
             });
           </p>
