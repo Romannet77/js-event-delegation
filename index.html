@@ -63,36 +63,66 @@
               insertAdjacentHTML()
             </a> JavaScript method was used: 
           </p>
-          <p class="js-code-info">
-            const button = document.querySelector(".button-add-framework");
-          </p>
-          <p class="js-code-info">
-            const input = document.querySelector("#input-value");
-          </p>
-          <p class="js-code-info">const ul = document.querySelector("ul");</p>
-          <p class="js-code-info">/*Add an element at the beginning of the list by clicking "Add Framework" button:*/</p>
-          <p class="js-code-info">
-            button.addEventListener("click", function () {<br>
-            if (input.value !== "") {<br>
-            const li = `&lt;li class="element-list"&gt;
-            ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
-            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br>
-            ul.insertAdjacentHTML(
-            "afterBegin", li);<br>input.value = "";<br>
-            &nbsp;&nbsp;} <br>});
-          </p>
-          <p class="js-code-info">/*Add an element at the beginning of the list by pressing key "Enter":*/</p>
-          <p class="js-code-info">
-            input.addEventListener("keypress", function (e) {<br>if (e.key ===
-            "Enter" && input.value !== "") {<br>
-            const li = `&lt;li class="element-list"&gt;
-            ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
-            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br>
-            ul.insertAdjacentHTML(
-            "afterBegin", li);<br>input.value ="";<br>
-            &nbsp;&nbsp;}<br>
-            });
-          </p>
+          <div class="js-code-info">
+            <p>
+              const button = document.querySelector(".button-add-framework");
+            </p>
+            <p>
+              const input = document.querySelector("#input-value");
+            </p>
+            <p>const ul = document.querySelector("ul");</p>
+            <p>/*Add an element at the beginning of the list by clicking "Add Framework" button:*/</p>
+            <div class="js-function">
+              <p>
+                button.addEventListener("click", function () {
+              </p> 
+              <p>
+                &nbsp;&nbsp;if (input.value !== "") {
+              </p>
+              <div class="function-body-part">
+                <p>
+                  const li = `&lt;li class="element-list"&gt;
+                  ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
+                  class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;
+                </p>
+                <p>
+                  ul.insertAdjacentHTML(
+                  "afterBegin", li);
+                </p>
+                <p>input.value = "";</p>
+              </div>
+              <p>
+                &nbsp;&nbsp;}
+              </p>
+              <p>});</p>
+            </div>
+            <p>/*Add an element at the beginning of the list by pressing key "Enter":*/</p>
+            <div class="js-function">
+              <p>
+                input.addEventListener("keypress", function (e) {
+              </p>
+              <p>
+                &nbsp;&nbsp;if (e.key === "Enter" && input.value !== "") {
+              </p>
+              <div class="function-body-part">
+                <p>
+                  const li = `&lt;li class="element-list"&gt;
+                  ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
+                  class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;
+                </p>
+                <p>
+                  ul.insertAdjacentHTML("afterBegin", li);
+                </p>
+                <p>
+                  input.value = "";
+                </p>
+              </div>
+              <p>
+                &nbsp;&nbsp;}
+              </p>
+              <p>});</p>
+            </div>
+          </div>
           <p>
             But we can not remove added
             <span class="html-tag">&lt;li&gt;</span> element by clicking
@@ -101,14 +131,30 @@
             "programming languages" but the dynamically created elements with
             "frameworks" will not be affected:
           </p>
-          <p class="js-code-info">
-            const deleteButtons = document.querySelectorAll(".btn-delete");
-          </p>
-          <p class="js-code-info">
-            deleteButtons.forEach((delBtn) => {
-            <br>delBtn.addEventListener("click", () => {<br>
-            delBtn.parentElement.remove(); <br>&nbsp;&nbsp;}); <br>});
-          </p>
+          <div class="js-code-info">
+            <div class="js-function">
+              <p>
+                const deleteButtons = document.querySelectorAll(".btn-delete");
+              </p>
+              <p>
+                deleteButtons.forEach((delBtn) => {
+              </p>
+              <div class="function-body-part">
+                <p>
+                  delBtn.addEventListener("click", () => {
+                </p>
+                <p>
+                  &nbsp;&nbsp;delBtn.parentElement.remove();
+                </p>
+              </div>
+              <p>
+                &nbsp;&nbsp;});
+              </p>
+              <p>
+                });
+              </p>
+            </div>
+          </div>
           <p>
             So, It means that we can delete only "programming languages" but not
             added "frameworks" by clicking "delete" button !
@@ -128,19 +174,34 @@
             triggered in our <span class="html-tag">&lt;ul&gt;</span> element
             that matches our selected "delete" &lt;button&gt; element:
           </p>
-          <p class="js-code-info">const ul = document.querySelector("ul");</p>
-          <p class="js-code-info">
-            ul.addEventListener("click", (event) => {<br>
-            if (event.target.classList.contains ("btn-delete")) {<br>
-            event.target.parentElement.remove();<br>
-            &nbsp;&nbsp;}<br>
-            });
-          </p>
+          <div class="js-code-info">
+            <div class="js-function">
+              <p>
+                const ul = document.querySelector("ul");
+              </p>
+              <p>
+                ul.addEventListener("click", (event) => {
+              </p>
+              <p>
+                &nbsp;&nbsp;if (event.target.classList.contains ("btn-delete")) {
+              </p>
+              <div class="function-body-part">
+                <p>
+                  event.target.parentElement.remove();
+                </p>
+              </div>
+              <p>&nbsp;&nbsp;}</p>
+              <p> 
+                });
+              </p>
+            </div>
+          </div>
           <p>
             We used the <span class="js-property">classList</span> property and 
             the <span class="js-method">contains()</span> 
             method to "catch" the "click" event on the HTML element that we need:
-            <span class="js-code">event.target.classList.contains("btn-delete")</span> !
+            <span class="js-code">event.target.</span><span class="js-property">classList</span>.
+            <span class="js-method">contains(<span class="js-code">"btn-delete"</span>)</span> !
           </p>
           <div>
             <h4 class="conclusion">conclusion</h4>

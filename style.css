@@ -1,5 +1,7 @@
 :root {
   --blue-color: rgb(25, 54, 247);
+  --syntax-background-color: rgb(233, 233, 253);
+  --syntax-text-color: rgb(165, 42, 42);
 }
 
 html {
@@ -120,11 +122,29 @@ p span.try-it {
   font-weight: bolder;
 }
 
-div.code-info p.js-code-info {
-  color: rgb(165, 42, 42);
-  background-color: rgb(233, 233, 253);
-  line-height: 1.8rem;
+div.code-info p {
+  padding: 0.8rem 0;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+}
+
+div.js-code-info {
+  background-color: var(--syntax-background-color);
+}
+
+div.js-code-info p {
+  color: var(--syntax-text-color);
+  line-height: 1.3rem;
   padding-left: 0.6rem;
+  font-size: 1.1rem;
+}
+
+div.js-function p {
+  padding: 0.2rem 0 0.2rem 0.6rem;
+}
+
+div.function-body-part {
+  padding-left: 1.3rem;
 }
 
 span.js-code {
@@ -190,12 +210,6 @@ li {
   background-color: rgb(36, 31, 31);
   color: white;
   box-shadow: none;
-}
-
-div.code-info p {
-  padding: 0.8rem 0;
-  line-height: 1.6rem;
-  font-size: 1.2rem;
 }
 
 div.ul-container li span {
@@ -286,6 +300,10 @@ footer .profile-links img {
 @media only screen and (max-width: 540px) {
   div.action-container {
     width: 100%;
+  }
+
+  div.code-info {
+    padding: 0;
   }
 
   ul {
